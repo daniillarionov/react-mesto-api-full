@@ -1,0 +1,13 @@
+.element {
+  margin: 0;
+  height: 361px;
+  position: relative;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+}
+

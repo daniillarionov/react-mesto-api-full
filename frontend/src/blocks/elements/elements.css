@@ -1,0 +1,29 @@
+.elements {
+  padding: 0 19px;
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .elements {
+    padding: 0 32px;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 17px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .elements {
+    padding: 0 65px;
+    margin: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 880px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .elements {
+    padding: 0 200px;
+  }
+}

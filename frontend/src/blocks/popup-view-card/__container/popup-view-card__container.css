@@ -1,0 +1,9 @@
+.popup-view-card__container {
+  max-width: 75vw;
+  max-height: 75vh;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin-top: 12.5vh;
+}
+  

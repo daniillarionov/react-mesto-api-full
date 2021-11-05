@@ -1,0 +1,7 @@
+.login__submit_inactive {
+  color: #000;
+  background: #E5E5E5;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  opacity: 0.2;
+}

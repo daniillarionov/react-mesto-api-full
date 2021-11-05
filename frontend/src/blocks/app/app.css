@@ -1,0 +1,17 @@
+.app {
+  min-height: 100vmin;
+  font-family: "Inter", "Arial", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #FFFFFF;
+  width: 100%;
+  padding: 0 0 36px 0;
+  background-color: #000000;
+  background-size: cover;
+  box-sizing: border-box;  
+}
+
+@media screen and (min-width: 1024px) {
+  .app {
+    padding: 0 0 50px 0;
+  }
+}

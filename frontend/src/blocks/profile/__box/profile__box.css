@@ -1,0 +1,11 @@
+.profile__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .profile__box {
+    flex-direction: row;
+  }
+}

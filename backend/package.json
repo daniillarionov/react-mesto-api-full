@@ -1,0 +1,38 @@
+{
+  "name": "express-mesto",
+  "version": "1.0.0",
+  "description": "Training project on creating a server",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "lint": "npx eslint .",
+    "lint:fix": "npx eslint ../express-mesto --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniillarionov/express-mesto.git"
+  },
+  "author": "Daniil Larionov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daniillarionov/express-mesto/issues"
+  },
+  "homepage": "https://github.com/daniillarionov/express-mesto#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "celebrate": "^15.0.0",
+    "express": "^4.17.1",
+    "express-winston": "^4.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.12",
+    "validator": "^13.6.0",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.1.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.25.2",
+    "nodemon": "^2.0.14"
+  }
+}

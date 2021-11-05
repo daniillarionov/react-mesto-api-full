@@ -1,0 +1,11 @@
+.profile__avatar-edit {
+    background-color: transparent;
+    padding: 0;
+    height: 26px;
+    width: 26px;
+    position:absolute;
+    left: 40%;
+    top: 40%;
+    border: none;
+    cursor: pointer;
+}
