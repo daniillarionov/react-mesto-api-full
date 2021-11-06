@@ -5,6 +5,7 @@ const userRoutes = require('./routes/users');
 const cardRoutes = require('./routes/cards');
 const { createUser, login } = require('./controllers/users');
 const auth = require('./middlewares/auth');
+const cors = require('./middlewares/cors');
 const urlValidator = require('./constants');
 const NotFoundError = require('./errors/not-found-err');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
@@ -18,6 +19,7 @@ mongoose.connect('mongodb://localhost:27017/mestodb ', {
 });
 
 app.use(requestLogger);
+app.use(cors);
 
 app.post('/signin', celebrate({
   body: Joi.object().keys({

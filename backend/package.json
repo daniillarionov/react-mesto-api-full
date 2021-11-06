@@ -7,7 +7,7 @@
     "start": "node app.js",
     "dev": "nodemon app.js",
     "lint": "npx eslint .",
-    "lint:fix": "npx eslint ../express-mesto --fix"
+    "lint:fix": "npx eslint ../backend --fix"
   },
   "repository": {
     "type": "git",

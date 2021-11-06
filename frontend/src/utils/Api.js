@@ -56,6 +56,6 @@ class Api {
         })
     }
 }
-const api = new Api({server: 'https://mesto.nomoreparties.co/v1/', cohort: 'cohort-24/',
-token: '0ea2ceba-98d3-4ffa-b48c-30fdce64ff5d'});
+const api = new Api({server: 'https://api.go.to.mesto.nomoredomains.work', cohort: 'cohort-26/',
+token: 'fe41b4b2-7ea4-4501-9d20-223e9d4cb8d5'});
 export default api;

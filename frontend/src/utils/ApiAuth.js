@@ -39,5 +39,5 @@ class ApiAuth {
     }).then(this._makeCheck())
   };
 }
-const apiAuth = new ApiAuth("https://auth.nomoreparties.co");
+const apiAuth = new ApiAuth("https://api.go.to.mesto.nomoredomains.work");
 export default apiAuth;
