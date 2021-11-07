@@ -23,13 +23,13 @@ class Api {
             }))
     }
     getInitialCards() {
-        return this._makeRequest('cards', 'GET')
+        return this._makeRequest('/cards', 'GET')
     }
     getUserInfo() {
-        return this._makeRequest('users/me', 'GET')
+        return this._makeRequest('/users/me', 'GET')
     }
     updateUserInfo(name, job) {
-        return this._makeRequest('users/me', 'PATCH', {
+        return this._makeRequest('/users/me', 'PATCH', {
             name: name,
             about: job
         })
@@ -38,23 +38,23 @@ class Api {
         name,
         link
     }) {
-        return this._makeRequest('cards', 'POST', {
+        return this._makeRequest('/cards', 'POST', {
             name,
             link
         })
     }
     deleteCard(id) {
-        return this._makeRequest(`cards/${id}`, 'DELETE')
+        return this._makeRequest(`/cards/${id}`, 'DELETE')
     }
     changeLikeCardStatus(id, isLiked) {
         console.log(isLiked)
-        return this._makeRequest(`cards/${id}/likes`, isLiked ? 'DELETE' : 'PUT')
+        return this._makeRequest(`/cards/${id}/likes`, isLiked ? 'DELETE' : 'PUT')
     }
     editAvatar(avatar) {
-        return this._makeRequest('users/me/avatar', 'PATCH', {
+        return this._makeRequest('/users/me/avatar', 'PATCH', {
             avatar: avatar
         })
     }
 }
-const api = new Api({server: 'https://api.go.to.mesto.nomoredomains.work/'});
+const api = new Api({server: 'https://api.go.to.mesto.nomoredomains.work'});
 export default api; 
