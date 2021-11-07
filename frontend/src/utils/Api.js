@@ -7,7 +7,7 @@ class Api {
         const fetchInit = {
             method: method,
             headers: {
-                authorization: this._token,
+                authorization: `Bearer ${this._token}`,
                 'Content-Type': 'application/json'
             }
         }
