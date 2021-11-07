@@ -215,6 +215,14 @@ function App() {
         setCurrentUserEmail(email);
         setLoggedIn(true);
         history.push("/");
+        api
+        .getUserInfo()
+        .then((res) => {
+          setCurrentUser(res);
+        })
+        .catch((err) => {
+          console.log(err);
+      });
       })
       .catch((err) => {
         setIsInfoTooltipOpen(true);
