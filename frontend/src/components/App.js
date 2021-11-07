@@ -71,6 +71,7 @@ function App() {
   }, []);
 
   function handleCardLike(card) {
+    console.log(card._id)
     const isLiked = card.likes.some((i) => i._id === currentUser._id);
     api
       .changeLikeCardStatus(card._id, isLiked)
@@ -209,8 +210,8 @@ function App() {
     setIsLoading(true)
     apiAuth
       .login({ password, email })
-      .then((token) => {
-        localStorage.setItem("jwt", token);
+      .then((data) => {
+        localStorage.setItem("jwt", data.token);
         setCurrentUserEmail(email);
         setLoggedIn(true);
         history.push("/");

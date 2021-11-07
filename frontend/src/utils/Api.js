@@ -1,13 +1,13 @@
 class Api {
-    constructor({server, token}) {
+    constructor({server}) {
         this._server = server
-        this._token = token;
     }
     _makeRequest(endpoint, method, body) {
+        const token = localStorage.getItem("jwt");
         const fetchInit = {
             method: method,
             headers: {
-                authorization: `Bearer ${this._token}`,
+                authorization: `Bearer ${token}`,
                 'Content-Type': 'application/json'
             }
         }
