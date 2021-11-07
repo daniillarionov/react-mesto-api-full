@@ -47,7 +47,8 @@ class Api {
         return this._makeRequest(`cards/${id}`, 'DELETE')
     }
     changeLikeCardStatus(id, isLiked) {
-        return this._makeRequest(`cards/likes/${id}`, isLiked ? 'DELETE' : 'PUT')
+        console.log(isLiked)
+        return this._makeRequest(`cards/${id}/likes`, isLiked ? 'DELETE' : 'PUT')
     }
     editAvatar(avatar) {
         return this._makeRequest('users/me/avatar', 'PATCH', {

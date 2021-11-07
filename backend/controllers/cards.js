@@ -29,6 +29,8 @@ const deleteCard = (req, res, next) => {
     .orFail(new Error('Not valid id'))
     .then((card) => {
       if (card.owner.equals(req.user._id)) {
+        console.log(card.owner)
+        console.log(req.user._id)
         card.delete()
           .then(() => res.status(200).send(card));
       }
