@@ -32,7 +32,7 @@ const deleteCard = (req, res, next) => {
         card.delete()
           .then(() => res.status(200).send(card));
       } else {
-      next(new ForbiddenError('Удалить карточку может только её владелец'));
+        next(new ForbiddenError('Удалить карточку может только её владелец'));
       }
     })
     .catch((err) => {
@@ -48,7 +48,6 @@ const deleteCard = (req, res, next) => {
 };
 
 const likeCard = (req, res, next) => {
-  console.log(req)
   const { cardId } = req.params;
   return Card.findByIdAndUpdate(
     cardId,
