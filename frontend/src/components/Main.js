@@ -52,7 +52,7 @@ function Main({
         />
       </section>
       <section className="elements">
-        {cards.map((item) => {
+        {cards.reverse().map((item) => {
           return (
             <Card
               card={item}
