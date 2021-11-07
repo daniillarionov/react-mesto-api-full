@@ -209,8 +209,8 @@ function App() {
     setIsLoading(true)
     apiAuth
       .login({ password, email })
-      .then((data) => {
-        localStorage.setItem("jwt", data.token);
+      .then((token) => {
+        localStorage.setItem("jwt", token);
         setCurrentUserEmail(email);
         setLoggedIn(true);
         history.push("/");
