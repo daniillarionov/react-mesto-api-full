@@ -6,13 +6,13 @@ const userRoutes = require('./routes/users');
 const cardRoutes = require('./routes/cards');
 const { createUser, login } = require('./controllers/users');
 const auth = require('./middlewares/auth');
-const allowOrigin = require('./middlewares/cors');
 const urlValidator = require('./constants');
 const NotFoundError = require('./errors/not-found-err');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 const PORT = 3000;
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 mongoose.connect('mongodb://localhost:27017/mestodb ', {
@@ -20,7 +20,6 @@ mongoose.connect('mongodb://localhost:27017/mestodb ', {
 });
 
 app.use(requestLogger);
-app.use(cors(allowOrigin));
 
 app.post('/signin', celebrate({
   body: Joi.object().keys({
