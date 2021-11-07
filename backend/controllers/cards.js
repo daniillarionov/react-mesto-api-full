@@ -29,12 +29,11 @@ const deleteCard = (req, res, next) => {
     .orFail(new Error('Not valid id'))
     .then((card) => {
       if (card.owner.equals(req.user._id)) {
-        console.log(card.owner)
-        console.log(req.user._id)
         card.delete()
           .then(() => res.status(200).send(card));
+      } else {
+      next(new ForbiddenError('Удалить карточку может только её владелец'));
       }
-      return next(new ForbiddenError('Удалить карточку может только её владелец'));
     })
     .catch((err) => {
       if (err.name === 'CastError') {
