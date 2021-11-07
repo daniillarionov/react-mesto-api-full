@@ -57,4 +57,4 @@ class Api {
 }
 const jwt = localStorage.getItem("jwt");
 const api = new Api({server: 'https://api.go.to.mesto.nomoredomains.work/', token: jwt});
-export default api;
+export default api; 
