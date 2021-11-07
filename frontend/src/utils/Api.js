@@ -1,7 +1,6 @@
 class Api {
-    constructor({server, cohort, token}) {
+    constructor({server, token}) {
         this._server = server
-        this._cohort = cohort;
         this._token = token;
     }
     _makeRequest(endpoint, method, body) {
@@ -12,7 +11,7 @@ class Api {
                 'Content-Type': 'application/json'
             }
         }
-        return fetch(`${this._server}${this._cohort}${endpoint}`, body ? {...fetchInit,
+        return fetch(`${this._server}${endpoint}`, body ? {...fetchInit,
             body: JSON.stringify(body)
         } : fetchInit).then(
             (res => {
@@ -56,6 +55,6 @@ class Api {
         })
     }
 }
-const api = new Api({server: 'https://api.go.to.mesto.nomoredomains.work', cohort: 'cohort-26/',
-token: 'fe41b4b2-7ea4-4501-9d20-223e9d4cb8d5'});
+const jwt = localStorage.getItem("jwt");
+const api = new Api({server: 'https://api.go.to.mesto.nomoredomains.work/', token: jwt});
 export default api;
